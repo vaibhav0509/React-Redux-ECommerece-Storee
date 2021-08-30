@@ -1,0 +1,53 @@
+@topMargin : 2rem;
+@elementHeight: 6rem;
+@elementWidth: 5rem;
+@orangeColor : orange;
+@borderStyle: 3px soild @orangeColor;
+@leftMargin: 1rem;
+@leftPadding: 2rem;
+
+.cartSummaryTableImage{
+    margin-top: @topMargin;
+    height: @elementHeight -1rem;
+    width: @elementWidth;
+}
+#cart_header_space{
+    margin-left: @leftMargin - 0.5rem;
+}
+
+img{
+    margin-top: @topMargin;
+    height: @elementHeight + 1rem;
+    width: @elementWidth + 1rem;
+}
+.max-lines {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;
+  }
+
+.mt_3{
+    margin-top: @topMargin + 1rem;
+    padding-left: @leftPadding + 2rem;
+}
+
+.billHeaderText{
+    border: @borderStyle;
+    border-left: none;
+    border-right: none;
+}
+
+.billIcon{
+    font-size: 2rem;
+    margin-left: @leftMargin;
+    color: @orangeColor;
+}
+
+.billHeader{
+    background: #f4f6f8;
+    padding-left: @leftPadding;
+
+}

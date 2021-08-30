@@ -1,0 +1,42 @@
+.cartSummaryTableImage{
+    margin-top: 2rem;
+    height: 5rem;
+    width: 5rem;
+}
+#cart_header_space{
+    margin-left: 0.5rem;
+}
+img{
+    margin-top: 2rem;
+    height: 7rem;
+    width: 6rem;
+}
+.max-lines {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;
+  }
+.mt_3{
+    margin-top: 3rem;
+    padding-left: 4rem;
+}
+.billHeaderText{
+    border: 3px solid orange;
+    border-left: none;
+    border-right: none;
+}
+
+.billIcon{
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: orange;
+}
+
+.billHeader{
+    background: #f4f6f8;
+    padding-left: 2rem;
+
+}

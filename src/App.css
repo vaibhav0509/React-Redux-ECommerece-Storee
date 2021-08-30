@@ -1,38 +1,515 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;}
+
+:root{
+    --white: #fff;
+    --black: #000;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nav{
+    width: auto;
+    height: 5rem;
+    box-shadow: 0 5rem 20rem 2rem rgba(0, 0, 0, 0.1);
+
+    background:  var(--white);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav___container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    justify-content: space-between;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav__left img{
+    width: 8rem;
+    height: 8rem;
+   
+    }
+
+.header{
+    background: url("./images/banner.jpeg");
+    height: 30vh;
+    max-height: 30vh;
+    margin-top: 5rem;
+    /* background-size: contain; */
+    background-repeat: repeat-x;
+
+    /* background-repeat: no-repeat; */
+
+
+    
 }
 
-.App-link {
-  color: #61dafb;
+.basket{
+    position: relative;
+  
+}
+.basket span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -1rem;
+    top: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #2c2c2c;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-icon{
+    color:orange;
+    font-size: 1.8rem;
 }
+.row{
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+.col_2{
+    width: 16.333333333%;
+    padding-left: 2rem;    
+}
+.cart_col-3{
+    width: 25%;
+}
+
+.col_3{
+    width: 30%;
+    background-color: rgb(248, 248, 248);
+    margin: 10px 10px;
+}
+
+.col_9{
+    width: 75%;
+}
+.mtb-30{
+    margin-top: 1rem;
+}
+.mt-100{
+    margin-top: 10rem;
+}    
+
+.prodcut img{
+    width: 100%;
+    height: 20rem;
+    transition: all .5s linear;
+    overflow: hidden;
+}
+
+.prodcut img:hover{
+    transform: scale(1.2);
+}
+.detail_image{
+    width: 100%;
+    height: auto;
+}
+
+.detail_image img{
+    width: 50%;
+    height: auto;
+    margin-left: 40%;
+}
+.detail_name{
+    font-size: 28px;
+    color: goldenrod;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.detail_price{
+    margin-top: 3rem;
+}
+.detail_actualPrice{
+    font-size: 1.5rem;
+}
+
+
+#IncDecblock{
+    margin-left: -3rem;
+    margin-bottom: 2rem;
+}
+.decInc{
+    display: flex;
+    margin-top: 2rem;
+    
+}
+
+.dec,
+.inc,
+.quantity{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid silver;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity{
+    border-left: none;
+    border-right: none;
+}
+.inc,
+.dec{
+    cursor: pointer;
+}
+
+.ToastMessageDisplay{
+    background: green;
+    color: white;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 8rem;
+    text-align: center;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+
+#cartRmvBtn{
+    margin-left: 3rem;
+}
+
+.btn-default{
+    margin-left: 0.5rem;
+    width: 100%;
+    border: none;
+    background: orange;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    font: 400;
+}
+
+.detail_productDescription{
+    margin-top: 1rem;
+}
+.detail_productDescription h3{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.prodcut{
+
+    padding: 2rem 2rem 0rem 2rem;
+    overflow: hidden;
+  
+}
+.product_name{
+    text-transform: capitalize;
+    color: #707070;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+
+
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 2.6em;
+    line-height: 1.2em;
+}
+
+.col_6{
+    width: 50%;
+}
+
+ .product__price{
+     text-align: center;
+ }
+ .product__price_text{
+     
+     margin-left: 1.5rem;
+     margin-right: 1rem;
+     text-align: center;
+     font-size: 1.2rem;
+ }
+
+ .actualPrice{
+
+     font-size: 18px;
+ }
+ 
+ 
+ .verticalAlign{
+     align-items: center;
+     margin-top: 1rem;
+ }
+
+.cart{
+    margin-top: 6rem;
+}
+.cart h3{
+    font-weight: 400;
+}
+.cart_header_text{
+    margin-top: 7rem;
+    display: flex;    
+}
+.cart_header_icon
+{
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+
+.text-center{
+    text-align: center;
+}
+.cart_heading{
+    background: #f4f6f8;
+    padding: 0rem 2rem;
+}
+.cart__remove{
+    cursor: pointer;
+}
+
+
+.cart__image img{
+    width: 16vmin;
+    height: 100%;
+    object-fit: contain;
+}
+.cart__name{
+    display: block;
+    text-overflow:clip;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 1.8rem;
+    line-height: 2rem;
+ 
+
+}
+.cart_price{
+    margin-left: 1rem;
+}
+
+.summary{
+    padding-left: 10px;
+}
+.summary__heading{
+    background: #f4f6f8;
+    padding: 0rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.summary__details{
+    background: orange;
+    color: white;
+    padding: 1rem ;
+}
+.mb-10{
+    margin-bottom: 1rem;
+}
+.checkout{
+     border: none;
+     cursor: pointer;
+     outline: none;
+     background: white;
+     color: orange;
+     width: 100%;
+     padding: 1rem 2rem ;
+     text-transform: uppercase;
+     border-radius: 10px;
+}
+
+@media(max-width: 1208px){
+
+    .cart__name {
+        display: block;
+        text-overflow: clip;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 1.8rem;
+        line-height: 2rem;
+     
+    }
+    .cart_heading {
+        background: #f4f6f8;
+        padding-right: 4rem;
+    }
+    .nav___container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        height: 4.5rem;
+        justify-content: space-between;
+
+    }
+
+    .container {
+        width: 94%;
+        margin: 2rem;
+        margin-top: 2rem;
+    }
+
+    .cart__image img{
+        width: 9vmin;
+        height: 7rem;
+        object-fit: contain;
+        
+    }
+    .row{
+        justify-content: space-between;
+    }
+
+    .mt-100 {
+        margin-top: 20rem;
+    }
+
+    .col_2 {
+        width: 6rem;
+        
+    }
+    .verticalAlign {
+        align-items: center;
+        margin-top: 0rem;
+        margin-left: -2rem;
+        padding-left: -1rem;
+        justify-content: space-between;
+    }
+
+
+} 
+
+
+@media(max-width: 768px){
+    .header{
+        background-size: contain;
+    }
+    .container{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .mt-100 {
+        margin-top: 4rem;
+    }
+    .col_2 {
+        width: 16%; 
+        
+    }
+    .col_3{
+        width: 50%;
+        margin-left: inherit;
+
+    }
+   
+
+    .col_6
+    {
+        width: 100%;
+    }
+    .detail_image{
+        padding-right: 12rem;
+    }
+   
+    .detail_image img:hover{
+        transform: scale(1.2);
+    }
+    .cart_heading{
+        display: none;
+    }
+    .verticalAlign {
+        align-items: center;
+        margin-top: 0rem;
+        margin-left: -4rem;
+        padding-left: -1rem;
+        justify-content: space-between;
+    }
+    #IncDecblock {
+        margin-left: -2.6rem;
+     
+    }
+    .checkout {
+        padding: 0.5rem 0rem;
+        border-radius: 30px;
+    }
+    .summary {
+        padding-left: none;
+    }
+    .summary__details {
+
+        padding: 0.5rem;
+    }
+}
+@media(max-width: 550px){
+    .header{
+        display: none;
+    }
+ 
+    .container {
+        width: 88%;
+        padding: 0rem 0rem;
+    }
+ 
+    .mt-100 {
+        margin-top: 4rem;
+    }
+    .col_3 {
+        width: 100%;
+        margin-left: 0rem;
+        margin-top: 3rem;
+        
+    }
+    .col_2 {
+        width: 5rem;
+        margin-left: 0rem;
+    }
+    .col_6{
+        width: 100%;
+
+     }
+     .col_9 {
+        width: 100%;
+    }
+     .detail_image{
+         padding-right: 6rem;
+     }
+     .prodcut {
+        padding: 2rem 5rem 0rem 5rem;
+        overflow: hidden;
+    }
+   
+    .cart_col-3 {
+        width: 100%;
+    }
+    .verticalAlign {
+ 
+        margin-left: -2rem;
+    }
+    #IncDecblock {
+        margin-left: 0.4rem;
+    }
+    .dec, .inc, .quantity {
+        width: 1rem;
+        height: 2rem;
+    }
+
+
+}
+
